@@ -1,0 +1,19 @@
+----UNIFORM COST SEARCH----
+
+Solutia 1:
+Nodul 1
+0: 5 4 rosu
+1: 2 2 galben
+2: 3 0 
+3: 7 3 albastru
+4: 1 0 
+5: 4 3 rosu
+
+Lungime: 1
+Cost: 0
+Timp: 0.0 secunde
+Numar maxim de noduri existente in memorie: 1
+Numar total de noduri calculate: 0
+
+---------------------------------------------------------------------------------
+

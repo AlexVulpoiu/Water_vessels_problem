@@ -1,5 +1,16 @@
-text din
-
-
-
-input 2
+rosu albastru mov
+galben albastru verde
+rosu 1
+verde 5
+albastru 9
+mov 2
+galben 2
+stare_initiala
+3 1 albastru
+4 1 verde
+6 0
+4 4 rosu
+1 1 galben
+stare_finala
+6 mov
+1 verde

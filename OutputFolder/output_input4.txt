@@ -1,0 +1,38 @@
+----UNIFORM COST SEARCH----
+
+Solutia 1:
+Nodul 1
+0: 5 3 rosu
+1: 4 0 
+2: 2 1 albastru
+3: 10 8 galben
+
+Nodul 2
+Din vasul 0 s-au turnat 1 litri de apa de culoare rosu in vasul 2
+0: 5 2 rosu
+1: 4 0 
+2: 2 2 mov
+3: 10 8 galben
+
+Nodul 3
+Din vasul 0 s-au turnat 2 litri de apa de culoare rosu in vasul 1
+0: 5 0 
+1: 4 2 rosu
+2: 2 2 mov
+3: 10 8 galben
+
+Nodul 4
+Din vasul 3 s-au turnat 2 litri de apa de culoare galben in vasul 1
+0: 5 0 
+1: 4 4 portocaliu
+2: 2 2 mov
+3: 10 6 galben
+
+Lungime: 4
+Cost: 18
+Timp: 0.018 secunde
+Numar maxim de noduri existente in memorie: 342
+Numar total de noduri calculate: 403
+
+---------------------------------------------------------------------------------
+
