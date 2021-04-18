@@ -144,20 +144,6 @@ class Graph:
             output_file.write("Nu exista solutii pentru datele primite!\n")
             valid_data = False
 
-        # global output_file
-        # output_file.write("Combinari:\n")
-        # for v in self.combinations:
-        #     output_file.write("\t" + str(v) + "\n")
-        # output_file.write("Costuri:\n")
-        # for c in self.costs.keys():
-        #     output_file.write("\t" + c + " -> " + str(self.costs[c]) + "\n")
-        # output_file.write("Starea initiala:\n")
-        # for x in self.start:
-        #     output_file.write("\t" + str(x) + "\n")
-        # output_file.write("Starea finala:\n")
-        # for c in self.scopes.keys():
-        #     output_file.write("\t" + c + " -> " + str(self.scopes[c]) + "\n")
-
     def test_scope(self, current_node: TraversalNode) -> bool:
         """
         :param current_node: TraversalNode, nodul curent din arborele de parcurgere
@@ -517,8 +503,6 @@ def iterative_deepening_a_star(source_graph: Graph, searched_solutions: int, heu
             output_file.write("Nu exista solutii!\n")
             break
         limit = result
-        # print("------------------Noua limita " + str(limit))
-        # input()
 
 
 def build_path(source_graph: Graph, current_node: TraversalNode, limit: int, searched_solutions: int,
@@ -580,7 +564,6 @@ def build_path(source_graph: Graph, current_node: TraversalNode, limit: int, sea
             return 0, "done", total_nodes
         if result < minimum:
             minimum = result
-            # print("Noul minim: " + str(minimum))
 
     return searched_solutions, minimum, total_nodes
 
