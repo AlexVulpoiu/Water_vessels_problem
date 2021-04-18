@@ -41,7 +41,7 @@ Din vasul 0 s-au turnat 1 litri de apa de culoare rosu in vasul 2
 
 Lungime: 2
 Cost: 4
-Timp: 0.001 secunde
+Timp: 0.0 secunde
 Numar maxim de noduri existente in memorie: 9
 Numar total de noduri calculate: 9
 
@@ -116,7 +116,7 @@ Din vasul 0 s-au turnat 1 litri de apa de culoare rosu in vasul 2
 
 Lungime: 2
 Cost: 4
-Timp: 0.001 secunde
+Timp: 0.0 secunde
 Numar maxim de noduri existente in memorie: 9
 Numar total de noduri calculate: 9
 
@@ -191,7 +191,7 @@ Din vasul 0 s-au turnat 1 litri de apa de culoare rosu in vasul 2
 
 Lungime: 2
 Cost: 4
-Timp: 0.001 secunde
+Timp: 0.0 secunde
 Numar maxim de noduri existente in memorie: 10
 Numar total de noduri calculate: 9
 
@@ -241,7 +241,7 @@ Din vasul 0 s-au turnat 1 litri de apa de culoare rosu in vasul 2
 
 Lungime: 2
 Cost: 4
-Timp: 0.0 secunde
+Timp: 0.001 secunde
 Numar maxim de noduri existente in memorie: 9
 Numar total de noduri calculate: 18
 
@@ -250,7 +250,27 @@ Numar total de noduri calculate: 18
 ----ITERATIVE DEEPENING A*----
 euristica admisibila 1
 
-Timpul de executie a depasit timeout-ul!
+Solutia 1:
+Nodul 1
+0: 5 4 rosu
+1: 4 0 
+2: 2 1 albastru
+3: 10 8 galben
+
+Nodul 2
+Din vasul 0 s-au turnat 1 litri de apa de culoare rosu in vasul 2
+0: 5 3 rosu
+1: 4 0 
+2: 2 2 mov
+3: 10 8 galben
+
+Lungime: 2
+Cost: 4
+Timp: 0.0 secunde
+Numar maxim de noduri existente in memorie: 9
+Numar total de noduri calculate: 18
+
+---------------------------------------------------------------------------------
 
 ----ITERATIVE DEEPENING A*----
 euristica admisibila 2
@@ -271,7 +291,7 @@ Din vasul 0 s-au turnat 1 litri de apa de culoare rosu in vasul 2
 
 Lungime: 2
 Cost: 4
-Timp: 0.0 secunde
+Timp: 0.001 secunde
 Numar maxim de noduri existente in memorie: 9
 Numar total de noduri calculate: 18
 
@@ -296,7 +316,7 @@ Din vasul 0 s-au turnat 1 litri de apa de culoare rosu in vasul 2
 
 Lungime: 2
 Cost: 4
-Timp: 0.001 secunde
+Timp: 0.0 secunde
 Numar maxim de noduri existente in memorie: 9
 Numar total de noduri calculate: 18
 

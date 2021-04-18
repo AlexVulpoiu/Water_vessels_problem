@@ -12,4 +12,3 @@ stare_initiala
 10 8 galben
 stare_finala
 2 mov
-3 rosu

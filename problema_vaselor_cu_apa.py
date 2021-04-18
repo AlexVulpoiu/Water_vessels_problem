@@ -262,7 +262,8 @@ class Graph:
                 return 0
             return 1
         elif heuristic_type == "euristica admisibila 1":
-            # pentru fiecare culoare, daca nu are fix cantitatea din starea scop, adaug 1, altfel adaug 0
+            # pentru fiecare culoare din scop, daca nu exista in starea curenta sau nu are cantitatea dorita
+            # intr-un singur vas, adaug 1
             h = 0
             colors = {}
             for vessel in information:
@@ -271,8 +272,8 @@ class Graph:
                 else:
                     colors[vessel[2]] = vessel[1]
 
-            for vessel in information:
-                if vessel[2] in self.scopes.keys() and self.scopes[vessel[2]] != colors[vessel[2]]:
+            for color in self.scopes.keys():
+                if color not in colors.keys() or self.scopes[color] != colors[color]:
                     h += 1
             return h
         elif heuristic_type == "euristica admisibila 2":
