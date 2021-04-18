@@ -1,38 +1,720 @@
 ----UNIFORM COST SEARCH----
 
+Timpul de executie a depasit timeout-ul!
+
+----A*----
+euristica banala
+
 Solutia 1:
 Nodul 1
-0: 5 3 rosu
-1: 4 0 
-2: 2 1 albastru
-3: 10 8 galben
+0: 5 4 rosu
+1: 2 2 galben
+2: 3 0 
+3: 7 3 albastru
+4: 1 0 
 
 Nodul 2
-Din vasul 0 s-au turnat 1 litri de apa de culoare rosu in vasul 2
-0: 5 2 rosu
-1: 4 0 
-2: 2 2 mov
-3: 10 8 galben
+Din vasul 0 s-au turnat 1 litri de apa de culoare rosu in vasul 4
+0: 5 3 rosu
+1: 2 2 galben
+2: 3 0 
+3: 7 3 albastru
+4: 1 1 rosu
 
 Nodul 3
-Din vasul 0 s-au turnat 2 litri de apa de culoare rosu in vasul 1
-0: 5 0 
-1: 4 2 rosu
-2: 2 2 mov
-3: 10 8 galben
+Din vasul 4 s-au turnat 1 litri de apa de culoare rosu in vasul 2
+0: 5 3 rosu
+1: 2 2 galben
+2: 3 1 rosu
+3: 7 3 albastru
+4: 1 0 
 
 Nodul 4
-Din vasul 3 s-au turnat 2 litri de apa de culoare galben in vasul 1
-0: 5 0 
-1: 4 4 portocaliu
-2: 2 2 mov
-3: 10 6 galben
+Din vasul 1 s-au turnat 1 litri de apa de culoare galben in vasul 4
+0: 5 3 rosu
+1: 2 1 galben
+2: 3 1 rosu
+3: 7 3 albastru
+4: 1 1 galben
 
-Lungime: 4
-Cost: 18
-Timp: 0.018 secunde
-Numar maxim de noduri existente in memorie: 342
-Numar total de noduri calculate: 403
+Nodul 5
+Din vasul 3 s-au turnat 1 litri de apa de culoare albastru in vasul 1
+0: 5 3 rosu
+1: 2 2 verde
+2: 3 1 rosu
+3: 7 2 albastru
+4: 1 1 galben
+
+Nodul 6
+Din vasul 2 s-au turnat 1 litri de apa de culoare rosu in vasul 3
+0: 5 3 rosu
+1: 2 2 verde
+2: 3 0 
+3: 7 3 mov
+4: 1 1 galben
+
+Lungime: 6
+Cost: 20
+Timp: 3.295 secunde
+Numar maxim de noduri existente in memorie: 6773
+Numar total de noduri calculate: 7602
+
+---------------------------------------------------------------------------------
+
+----A*----
+euristica admisibila 1
+
+Solutia 1:
+Nodul 1
+0: 5 4 rosu
+1: 2 2 galben
+2: 3 0 
+3: 7 3 albastru
+4: 1 0 
+
+Nodul 2
+Din vasul 0 s-au turnat 1 litri de apa de culoare rosu in vasul 4
+0: 5 3 rosu
+1: 2 2 galben
+2: 3 0 
+3: 7 3 albastru
+4: 1 1 rosu
+
+Nodul 3
+Din vasul 4 s-au turnat 1 litri de apa de culoare rosu in vasul 2
+0: 5 3 rosu
+1: 2 2 galben
+2: 3 1 rosu
+3: 7 3 albastru
+4: 1 0 
+
+Nodul 4
+Din vasul 1 s-au turnat 1 litri de apa de culoare galben in vasul 4
+0: 5 3 rosu
+1: 2 1 galben
+2: 3 1 rosu
+3: 7 3 albastru
+4: 1 1 galben
+
+Nodul 5
+Din vasul 3 s-au turnat 1 litri de apa de culoare albastru in vasul 1
+0: 5 3 rosu
+1: 2 2 verde
+2: 3 1 rosu
+3: 7 2 albastru
+4: 1 1 galben
+
+Nodul 6
+Din vasul 2 s-au turnat 1 litri de apa de culoare rosu in vasul 3
+0: 5 3 rosu
+1: 2 2 verde
+2: 3 0 
+3: 7 3 mov
+4: 1 1 galben
+
+Lungime: 6
+Cost: 20
+Timp: 1.255 secunde
+Numar maxim de noduri existente in memorie: 4384
+Numar total de noduri calculate: 4925
+
+---------------------------------------------------------------------------------
+
+----A*----
+euristica admisibila 2
+
+Solutia 1:
+Nodul 1
+0: 5 4 rosu
+1: 2 2 galben
+2: 3 0 
+3: 7 3 albastru
+4: 1 0 
+
+Nodul 2
+Din vasul 0 s-au turnat 1 litri de apa de culoare rosu in vasul 4
+0: 5 3 rosu
+1: 2 2 galben
+2: 3 0 
+3: 7 3 albastru
+4: 1 1 rosu
+
+Nodul 3
+Din vasul 4 s-au turnat 1 litri de apa de culoare rosu in vasul 2
+0: 5 3 rosu
+1: 2 2 galben
+2: 3 1 rosu
+3: 7 3 albastru
+4: 1 0 
+
+Nodul 4
+Din vasul 1 s-au turnat 1 litri de apa de culoare galben in vasul 4
+0: 5 3 rosu
+1: 2 1 galben
+2: 3 1 rosu
+3: 7 3 albastru
+4: 1 1 galben
+
+Nodul 5
+Din vasul 3 s-au turnat 1 litri de apa de culoare albastru in vasul 1
+0: 5 3 rosu
+1: 2 2 verde
+2: 3 1 rosu
+3: 7 2 albastru
+4: 1 1 galben
+
+Nodul 6
+Din vasul 2 s-au turnat 1 litri de apa de culoare rosu in vasul 3
+0: 5 3 rosu
+1: 2 2 verde
+2: 3 0 
+3: 7 3 mov
+4: 1 1 galben
+
+Lungime: 6
+Cost: 20
+Timp: 2.78 secunde
+Numar maxim de noduri existente in memorie: 6730
+Numar total de noduri calculate: 7555
+
+---------------------------------------------------------------------------------
+
+----A*----
+euristica neadmisibila
+
+Solutia 1:
+Nodul 1
+0: 5 4 rosu
+1: 2 2 galben
+2: 3 0 
+3: 7 3 albastru
+4: 1 0 
+
+Nodul 2
+Din vasul 0 s-au turnat 1 litri de apa de culoare rosu in vasul 4
+0: 5 3 rosu
+1: 2 2 galben
+2: 3 0 
+3: 7 3 albastru
+4: 1 1 rosu
+
+Nodul 3
+Din vasul 4 s-au turnat 1 litri de apa de culoare rosu in vasul 2
+0: 5 3 rosu
+1: 2 2 galben
+2: 3 1 rosu
+3: 7 3 albastru
+4: 1 0 
+
+Nodul 4
+Din vasul 1 s-au turnat 1 litri de apa de culoare galben in vasul 4
+0: 5 3 rosu
+1: 2 1 galben
+2: 3 1 rosu
+3: 7 3 albastru
+4: 1 1 galben
+
+Nodul 5
+Din vasul 3 s-au turnat 1 litri de apa de culoare albastru in vasul 1
+0: 5 3 rosu
+1: 2 2 verde
+2: 3 1 rosu
+3: 7 2 albastru
+4: 1 1 galben
+
+Nodul 6
+Din vasul 2 s-au turnat 1 litri de apa de culoare rosu in vasul 3
+0: 5 3 rosu
+1: 2 2 verde
+2: 3 0 
+3: 7 3 mov
+4: 1 1 galben
+
+Lungime: 6
+Cost: 20
+Timp: 4.868 secunde
+Numar maxim de noduri existente in memorie: 6748
+Numar total de noduri calculate: 7576
+
+---------------------------------------------------------------------------------
+
+----A* OPTIMISED----
+euristica banala
+
+Solutie:
+Nodul 1
+0: 5 4 rosu
+1: 2 2 galben
+2: 3 0 
+3: 7 3 albastru
+4: 1 0 
+
+Nodul 2
+Din vasul 0 s-au turnat 1 litri de apa de culoare rosu in vasul 4
+0: 5 3 rosu
+1: 2 2 galben
+2: 3 0 
+3: 7 3 albastru
+4: 1 1 rosu
+
+Nodul 3
+Din vasul 4 s-au turnat 1 litri de apa de culoare rosu in vasul 2
+0: 5 3 rosu
+1: 2 2 galben
+2: 3 1 rosu
+3: 7 3 albastru
+4: 1 0 
+
+Nodul 4
+Din vasul 1 s-au turnat 1 litri de apa de culoare galben in vasul 4
+0: 5 3 rosu
+1: 2 1 galben
+2: 3 1 rosu
+3: 7 3 albastru
+4: 1 1 galben
+
+Nodul 5
+Din vasul 3 s-au turnat 1 litri de apa de culoare albastru in vasul 1
+0: 5 3 rosu
+1: 2 2 verde
+2: 3 1 rosu
+3: 7 2 albastru
+4: 1 1 galben
+
+Nodul 6
+Din vasul 2 s-au turnat 1 litri de apa de culoare rosu in vasul 3
+0: 5 3 rosu
+1: 2 2 verde
+2: 3 0 
+3: 7 3 mov
+4: 1 1 galben
+
+Lungime: 6
+Cost: 20
+Timp: 0.529 secunde
+Numar maxim de noduri existente in memorie: 662
+Numar total de noduri calculate: 1022
+
+---------------------------------------------------------------------------------
+
+----A* OPTIMISED----
+euristica admisibila 1
+
+Solutie:
+Nodul 1
+0: 5 4 rosu
+1: 2 2 galben
+2: 3 0 
+3: 7 3 albastru
+4: 1 0 
+
+Nodul 2
+Din vasul 0 s-au turnat 1 litri de apa de culoare rosu in vasul 4
+0: 5 3 rosu
+1: 2 2 galben
+2: 3 0 
+3: 7 3 albastru
+4: 1 1 rosu
+
+Nodul 3
+Din vasul 4 s-au turnat 1 litri de apa de culoare rosu in vasul 2
+0: 5 3 rosu
+1: 2 2 galben
+2: 3 1 rosu
+3: 7 3 albastru
+4: 1 0 
+
+Nodul 4
+Din vasul 1 s-au turnat 1 litri de apa de culoare galben in vasul 4
+0: 5 3 rosu
+1: 2 1 galben
+2: 3 1 rosu
+3: 7 3 albastru
+4: 1 1 galben
+
+Nodul 5
+Din vasul 3 s-au turnat 1 litri de apa de culoare albastru in vasul 1
+0: 5 3 rosu
+1: 2 2 verde
+2: 3 1 rosu
+3: 7 2 albastru
+4: 1 1 galben
+
+Nodul 6
+Din vasul 2 s-au turnat 1 litri de apa de culoare rosu in vasul 3
+0: 5 3 rosu
+1: 2 2 verde
+2: 3 0 
+3: 7 3 mov
+4: 1 1 galben
+
+Lungime: 6
+Cost: 20
+Timp: 0.229 secunde
+Numar maxim de noduri existente in memorie: 580
+Numar total de noduri calculate: 868
+
+---------------------------------------------------------------------------------
+
+----A* OPTIMISED----
+euristica admisibila 2
+
+Solutie:
+Nodul 1
+0: 5 4 rosu
+1: 2 2 galben
+2: 3 0 
+3: 7 3 albastru
+4: 1 0 
+
+Nodul 2
+Din vasul 0 s-au turnat 1 litri de apa de culoare rosu in vasul 4
+0: 5 3 rosu
+1: 2 2 galben
+2: 3 0 
+3: 7 3 albastru
+4: 1 1 rosu
+
+Nodul 3
+Din vasul 4 s-au turnat 1 litri de apa de culoare rosu in vasul 2
+0: 5 3 rosu
+1: 2 2 galben
+2: 3 1 rosu
+3: 7 3 albastru
+4: 1 0 
+
+Nodul 4
+Din vasul 1 s-au turnat 1 litri de apa de culoare galben in vasul 4
+0: 5 3 rosu
+1: 2 1 galben
+2: 3 1 rosu
+3: 7 3 albastru
+4: 1 1 galben
+
+Nodul 5
+Din vasul 3 s-au turnat 1 litri de apa de culoare albastru in vasul 1
+0: 5 3 rosu
+1: 2 2 verde
+2: 3 1 rosu
+3: 7 2 albastru
+4: 1 1 galben
+
+Nodul 6
+Din vasul 2 s-au turnat 1 litri de apa de culoare rosu in vasul 3
+0: 5 3 rosu
+1: 2 2 verde
+2: 3 0 
+3: 7 3 mov
+4: 1 1 galben
+
+Lungime: 6
+Cost: 20
+Timp: 0.419 secunde
+Numar maxim de noduri existente in memorie: 648
+Numar total de noduri calculate: 973
+
+---------------------------------------------------------------------------------
+
+----A* OPTIMISED----
+euristica neadmisibila
+
+Solutie:
+Nodul 1
+0: 5 4 rosu
+1: 2 2 galben
+2: 3 0 
+3: 7 3 albastru
+4: 1 0 
+
+Nodul 2
+Din vasul 0 s-au turnat 1 litri de apa de culoare rosu in vasul 4
+0: 5 3 rosu
+1: 2 2 galben
+2: 3 0 
+3: 7 3 albastru
+4: 1 1 rosu
+
+Nodul 3
+Din vasul 4 s-au turnat 1 litri de apa de culoare rosu in vasul 2
+0: 5 3 rosu
+1: 2 2 galben
+2: 3 1 rosu
+3: 7 3 albastru
+4: 1 0 
+
+Nodul 4
+Din vasul 1 s-au turnat 1 litri de apa de culoare galben in vasul 4
+0: 5 3 rosu
+1: 2 1 galben
+2: 3 1 rosu
+3: 7 3 albastru
+4: 1 1 galben
+
+Nodul 5
+Din vasul 3 s-au turnat 1 litri de apa de culoare albastru in vasul 1
+0: 5 3 rosu
+1: 2 2 verde
+2: 3 1 rosu
+3: 7 2 albastru
+4: 1 1 galben
+
+Nodul 6
+Din vasul 2 s-au turnat 1 litri de apa de culoare rosu in vasul 3
+0: 5 3 rosu
+1: 2 2 verde
+2: 3 0 
+3: 7 3 mov
+4: 1 1 galben
+
+Lungime: 6
+Cost: 20
+Timp: 0.211 secunde
+Numar maxim de noduri existente in memorie: 692
+Numar total de noduri calculate: 1040
+
+---------------------------------------------------------------------------------
+
+----ITERATIVE DEEPENING A*----
+euristica banala
+
+Solutia 1:
+Nodul 1
+0: 5 4 rosu
+1: 2 2 galben
+2: 3 0 
+3: 7 3 albastru
+4: 1 0 
+
+Nodul 2
+Din vasul 0 s-au turnat 1 litri de apa de culoare rosu in vasul 4
+0: 5 3 rosu
+1: 2 2 galben
+2: 3 0 
+3: 7 3 albastru
+4: 1 1 rosu
+
+Nodul 3
+Din vasul 4 s-au turnat 1 litri de apa de culoare rosu in vasul 2
+0: 5 3 rosu
+1: 2 2 galben
+2: 3 1 rosu
+3: 7 3 albastru
+4: 1 0 
+
+Nodul 4
+Din vasul 1 s-au turnat 1 litri de apa de culoare galben in vasul 4
+0: 5 3 rosu
+1: 2 1 galben
+2: 3 1 rosu
+3: 7 3 albastru
+4: 1 1 galben
+
+Nodul 5
+Din vasul 3 s-au turnat 1 litri de apa de culoare albastru in vasul 1
+0: 5 3 rosu
+1: 2 2 verde
+2: 3 1 rosu
+3: 7 2 albastru
+4: 1 1 galben
+
+Nodul 6
+Din vasul 2 s-au turnat 1 litri de apa de culoare rosu in vasul 3
+0: 5 3 rosu
+1: 2 2 verde
+2: 3 0 
+3: 7 3 mov
+4: 1 1 galben
+
+Lungime: 6
+Cost: 20
+Timp: 2.541 secunde
+Numar maxim de noduri existente in memorie: 57
+Numar total de noduri calculate: 32132
+
+---------------------------------------------------------------------------------
+
+----ITERATIVE DEEPENING A*----
+euristica admisibila 1
+
+Solutia 1:
+Nodul 1
+0: 5 4 rosu
+1: 2 2 galben
+2: 3 0 
+3: 7 3 albastru
+4: 1 0 
+
+Nodul 2
+Din vasul 0 s-au turnat 1 litri de apa de culoare rosu in vasul 4
+0: 5 3 rosu
+1: 2 2 galben
+2: 3 0 
+3: 7 3 albastru
+4: 1 1 rosu
+
+Nodul 3
+Din vasul 4 s-au turnat 1 litri de apa de culoare rosu in vasul 2
+0: 5 3 rosu
+1: 2 2 galben
+2: 3 1 rosu
+3: 7 3 albastru
+4: 1 0 
+
+Nodul 4
+Din vasul 1 s-au turnat 1 litri de apa de culoare galben in vasul 4
+0: 5 3 rosu
+1: 2 1 galben
+2: 3 1 rosu
+3: 7 3 albastru
+4: 1 1 galben
+
+Nodul 5
+Din vasul 3 s-au turnat 1 litri de apa de culoare albastru in vasul 1
+0: 5 3 rosu
+1: 2 2 verde
+2: 3 1 rosu
+3: 7 2 albastru
+4: 1 1 galben
+
+Nodul 6
+Din vasul 2 s-au turnat 1 litri de apa de culoare rosu in vasul 3
+0: 5 3 rosu
+1: 2 2 verde
+2: 3 0 
+3: 7 3 mov
+4: 1 1 galben
+
+Lungime: 6
+Cost: 20
+Timp: 2.104 secunde
+Numar maxim de noduri existente in memorie: 57
+Numar total de noduri calculate: 24220
+
+---------------------------------------------------------------------------------
+
+----ITERATIVE DEEPENING A*----
+euristica admisibila 2
+
+Solutia 1:
+Nodul 1
+0: 5 4 rosu
+1: 2 2 galben
+2: 3 0 
+3: 7 3 albastru
+4: 1 0 
+
+Nodul 2
+Din vasul 0 s-au turnat 1 litri de apa de culoare rosu in vasul 4
+0: 5 3 rosu
+1: 2 2 galben
+2: 3 0 
+3: 7 3 albastru
+4: 1 1 rosu
+
+Nodul 3
+Din vasul 4 s-au turnat 1 litri de apa de culoare rosu in vasul 2
+0: 5 3 rosu
+1: 2 2 galben
+2: 3 1 rosu
+3: 7 3 albastru
+4: 1 0 
+
+Nodul 4
+Din vasul 1 s-au turnat 1 litri de apa de culoare galben in vasul 4
+0: 5 3 rosu
+1: 2 1 galben
+2: 3 1 rosu
+3: 7 3 albastru
+4: 1 1 galben
+
+Nodul 5
+Din vasul 3 s-au turnat 1 litri de apa de culoare albastru in vasul 1
+0: 5 3 rosu
+1: 2 2 verde
+2: 3 1 rosu
+3: 7 2 albastru
+4: 1 1 galben
+
+Nodul 6
+Din vasul 2 s-au turnat 1 litri de apa de culoare rosu in vasul 3
+0: 5 3 rosu
+1: 2 2 verde
+2: 3 0 
+3: 7 3 mov
+4: 1 1 galben
+
+Lungime: 6
+Cost: 20
+Timp: 2.658 secunde
+Numar maxim de noduri existente in memorie: 57
+Numar total de noduri calculate: 31266
+
+---------------------------------------------------------------------------------
+
+----ITERATIVE DEEPENING A*----
+euristica neadmisibila
+
+Solutia 1:
+Nodul 1
+0: 5 4 rosu
+1: 2 2 galben
+2: 3 0 
+3: 7 3 albastru
+4: 1 0 
+
+Nodul 2
+Din vasul 0 s-au turnat 1 litri de apa de culoare rosu in vasul 4
+0: 5 3 rosu
+1: 2 2 galben
+2: 3 0 
+3: 7 3 albastru
+4: 1 1 rosu
+
+Nodul 3
+Din vasul 4 s-au turnat 1 litri de apa de culoare rosu in vasul 2
+0: 5 3 rosu
+1: 2 2 galben
+2: 3 1 rosu
+3: 7 3 albastru
+4: 1 0 
+
+Nodul 4
+Din vasul 1 s-au turnat 1 litri de apa de culoare galben in vasul 4
+0: 5 3 rosu
+1: 2 1 galben
+2: 3 1 rosu
+3: 7 3 albastru
+4: 1 1 galben
+
+Nodul 5
+Din vasul 3 s-au turnat 1 litri de apa de culoare albastru in vasul 1
+0: 5 3 rosu
+1: 2 2 verde
+2: 3 1 rosu
+3: 7 2 albastru
+4: 1 1 galben
+
+Nodul 6
+Din vasul 2 s-au turnat 1 litri de apa de culoare rosu in vasul 3
+0: 5 3 rosu
+1: 2 2 verde
+2: 3 0 
+3: 7 3 mov
+4: 1 1 galben
+
+Nodul 7
+Din vasul 1 s-au turnat 2 litri de apa de culoare verde in vasul 2
+0: 5 3 rosu
+1: 2 0 
+2: 3 2 verde
+3: 7 3 mov
+4: 1 1 galben
+
+Lungime: 7
+Cost: 22
+Timp: 3.655 secunde
+Numar maxim de noduri existente in memorie: 67
+Numar total de noduri calculate: 40596
 
 ---------------------------------------------------------------------------------
 

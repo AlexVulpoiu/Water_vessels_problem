@@ -3,17 +3,322 @@
 Solutia 1:
 Nodul 1
 0: 5 4 rosu
-1: 2 2 galben
-2: 3 0 
-3: 7 3 albastru
-4: 1 0 
-5: 4 3 rosu
+1: 4 0 
+2: 2 1 albastru
+3: 10 8 galben
 
-Lungime: 1
-Cost: 0
+Nodul 2
+Din vasul 0 s-au turnat 1 litri de apa de culoare rosu in vasul 2
+0: 5 3 rosu
+1: 4 0 
+2: 2 2 mov
+3: 10 8 galben
+
+Lungime: 2
+Cost: 4
+Timp: 0.001 secunde
+Numar maxim de noduri existente in memorie: 9
+Numar total de noduri calculate: 9
+
+---------------------------------------------------------------------------------
+
+----A*----
+euristica banala
+
+Solutia 1:
+Nodul 1
+0: 5 4 rosu
+1: 4 0 
+2: 2 1 albastru
+3: 10 8 galben
+
+Nodul 2
+Din vasul 0 s-au turnat 1 litri de apa de culoare rosu in vasul 2
+0: 5 3 rosu
+1: 4 0 
+2: 2 2 mov
+3: 10 8 galben
+
+Lungime: 2
+Cost: 4
+Timp: 0.001 secunde
+Numar maxim de noduri existente in memorie: 9
+Numar total de noduri calculate: 9
+
+---------------------------------------------------------------------------------
+
+----A*----
+euristica admisibila 1
+
+Solutia 1:
+Nodul 1
+0: 5 4 rosu
+1: 4 0 
+2: 2 1 albastru
+3: 10 8 galben
+
+Nodul 2
+Din vasul 0 s-au turnat 1 litri de apa de culoare rosu in vasul 2
+0: 5 3 rosu
+1: 4 0 
+2: 2 2 mov
+3: 10 8 galben
+
+Lungime: 2
+Cost: 4
 Timp: 0.0 secunde
-Numar maxim de noduri existente in memorie: 1
-Numar total de noduri calculate: 0
+Numar maxim de noduri existente in memorie: 9
+Numar total de noduri calculate: 9
+
+---------------------------------------------------------------------------------
+
+----A*----
+euristica admisibila 2
+
+Solutia 1:
+Nodul 1
+0: 5 4 rosu
+1: 4 0 
+2: 2 1 albastru
+3: 10 8 galben
+
+Nodul 2
+Din vasul 0 s-au turnat 1 litri de apa de culoare rosu in vasul 2
+0: 5 3 rosu
+1: 4 0 
+2: 2 2 mov
+3: 10 8 galben
+
+Lungime: 2
+Cost: 4
+Timp: 0.0 secunde
+Numar maxim de noduri existente in memorie: 9
+Numar total de noduri calculate: 9
+
+---------------------------------------------------------------------------------
+
+----A*----
+euristica neadmisibila
+
+Solutia 1:
+Nodul 1
+0: 5 4 rosu
+1: 4 0 
+2: 2 1 albastru
+3: 10 8 galben
+
+Nodul 2
+Din vasul 0 s-au turnat 1 litri de apa de culoare rosu in vasul 2
+0: 5 3 rosu
+1: 4 0 
+2: 2 2 mov
+3: 10 8 galben
+
+Lungime: 2
+Cost: 4
+Timp: 0.0 secunde
+Numar maxim de noduri existente in memorie: 9
+Numar total de noduri calculate: 9
+
+---------------------------------------------------------------------------------
+
+----A* OPTIMISED----
+euristica banala
+
+Solutie:
+Nodul 1
+0: 5 4 rosu
+1: 4 0 
+2: 2 1 albastru
+3: 10 8 galben
+
+Nodul 2
+Din vasul 0 s-au turnat 1 litri de apa de culoare rosu in vasul 2
+0: 5 3 rosu
+1: 4 0 
+2: 2 2 mov
+3: 10 8 galben
+
+Lungime: 2
+Cost: 4
+Timp: 0.0 secunde
+Numar maxim de noduri existente in memorie: 10
+Numar total de noduri calculate: 9
+
+---------------------------------------------------------------------------------
+
+----A* OPTIMISED----
+euristica admisibila 1
+
+Solutie:
+Nodul 1
+0: 5 4 rosu
+1: 4 0 
+2: 2 1 albastru
+3: 10 8 galben
+
+Nodul 2
+Din vasul 0 s-au turnat 1 litri de apa de culoare rosu in vasul 2
+0: 5 3 rosu
+1: 4 0 
+2: 2 2 mov
+3: 10 8 galben
+
+Lungime: 2
+Cost: 4
+Timp: 0.006 secunde
+Numar maxim de noduri existente in memorie: 10
+Numar total de noduri calculate: 9
+
+---------------------------------------------------------------------------------
+
+----A* OPTIMISED----
+euristica admisibila 2
+
+Solutie:
+Nodul 1
+0: 5 4 rosu
+1: 4 0 
+2: 2 1 albastru
+3: 10 8 galben
+
+Nodul 2
+Din vasul 0 s-au turnat 1 litri de apa de culoare rosu in vasul 2
+0: 5 3 rosu
+1: 4 0 
+2: 2 2 mov
+3: 10 8 galben
+
+Lungime: 2
+Cost: 4
+Timp: 0.001 secunde
+Numar maxim de noduri existente in memorie: 10
+Numar total de noduri calculate: 9
+
+---------------------------------------------------------------------------------
+
+----A* OPTIMISED----
+euristica neadmisibila
+
+Solutie:
+Nodul 1
+0: 5 4 rosu
+1: 4 0 
+2: 2 1 albastru
+3: 10 8 galben
+
+Nodul 2
+Din vasul 0 s-au turnat 1 litri de apa de culoare rosu in vasul 2
+0: 5 3 rosu
+1: 4 0 
+2: 2 2 mov
+3: 10 8 galben
+
+Lungime: 2
+Cost: 4
+Timp: 0.001 secunde
+Numar maxim de noduri existente in memorie: 10
+Numar total de noduri calculate: 9
+
+---------------------------------------------------------------------------------
+
+----ITERATIVE DEEPENING A*----
+euristica banala
+
+Solutia 1:
+Nodul 1
+0: 5 4 rosu
+1: 4 0 
+2: 2 1 albastru
+3: 10 8 galben
+
+Nodul 2
+Din vasul 0 s-au turnat 1 litri de apa de culoare rosu in vasul 2
+0: 5 3 rosu
+1: 4 0 
+2: 2 2 mov
+3: 10 8 galben
+
+Lungime: 2
+Cost: 4
+Timp: 0.001 secunde
+Numar maxim de noduri existente in memorie: 9
+Numar total de noduri calculate: 18
+
+---------------------------------------------------------------------------------
+
+----ITERATIVE DEEPENING A*----
+euristica admisibila 1
+
+Solutia 1:
+Nodul 1
+0: 5 4 rosu
+1: 4 0 
+2: 2 1 albastru
+3: 10 8 galben
+
+Nodul 2
+Din vasul 0 s-au turnat 1 litri de apa de culoare rosu in vasul 2
+0: 5 3 rosu
+1: 4 0 
+2: 2 2 mov
+3: 10 8 galben
+
+Lungime: 2
+Cost: 4
+Timp: 0.0 secunde
+Numar maxim de noduri existente in memorie: 9
+Numar total de noduri calculate: 18
+
+---------------------------------------------------------------------------------
+
+----ITERATIVE DEEPENING A*----
+euristica admisibila 2
+
+Solutia 1:
+Nodul 1
+0: 5 4 rosu
+1: 4 0 
+2: 2 1 albastru
+3: 10 8 galben
+
+Nodul 2
+Din vasul 0 s-au turnat 1 litri de apa de culoare rosu in vasul 2
+0: 5 3 rosu
+1: 4 0 
+2: 2 2 mov
+3: 10 8 galben
+
+Lungime: 2
+Cost: 4
+Timp: 0.001 secunde
+Numar maxim de noduri existente in memorie: 9
+Numar total de noduri calculate: 18
+
+---------------------------------------------------------------------------------
+
+----ITERATIVE DEEPENING A*----
+euristica neadmisibila
+
+Solutia 1:
+Nodul 1
+0: 5 4 rosu
+1: 4 0 
+2: 2 1 albastru
+3: 10 8 galben
+
+Nodul 2
+Din vasul 0 s-au turnat 1 litri de apa de culoare rosu in vasul 2
+0: 5 3 rosu
+1: 4 0 
+2: 2 2 mov
+3: 10 8 galben
+
+Lungime: 2
+Cost: 4
+Timp: 0.0 secunde
+Numar maxim de noduri existente in memorie: 9
+Numar total de noduri calculate: 18
 
 ---------------------------------------------------------------------------------
 

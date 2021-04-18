@@ -1,1 +1,259 @@
-Nu exista solutii pentru datele primite!
+----UNIFORM COST SEARCH----
+
+Solutia 1:
+Nodul 1
+0: 5 4 rosu
+1: 2 2 galben
+2: 3 0 
+3: 7 3 albastru
+4: 1 0 
+5: 4 3 rosu
+
+Lungime: 1
+Cost: 0
+Timp: 0.0 secunde
+Numar maxim de noduri existente in memorie: 1
+Numar total de noduri calculate: 0
+
+---------------------------------------------------------------------------------
+
+----A*----
+euristica banala
+
+Solutia 1:
+Nodul 1
+0: 5 4 rosu
+1: 2 2 galben
+2: 3 0 
+3: 7 3 albastru
+4: 1 0 
+5: 4 3 rosu
+
+Lungime: 1
+Cost: 0
+Timp: 0.0 secunde
+Numar maxim de noduri existente in memorie: 1
+Numar total de noduri calculate: 0
+
+---------------------------------------------------------------------------------
+
+----A*----
+euristica admisibila 1
+
+Solutia 1:
+Nodul 1
+0: 5 4 rosu
+1: 2 2 galben
+2: 3 0 
+3: 7 3 albastru
+4: 1 0 
+5: 4 3 rosu
+
+Lungime: 1
+Cost: 0
+Timp: 0.0 secunde
+Numar maxim de noduri existente in memorie: 1
+Numar total de noduri calculate: 0
+
+---------------------------------------------------------------------------------
+
+----A*----
+euristica admisibila 2
+
+Solutia 1:
+Nodul 1
+0: 5 4 rosu
+1: 2 2 galben
+2: 3 0 
+3: 7 3 albastru
+4: 1 0 
+5: 4 3 rosu
+
+Lungime: 1
+Cost: 0
+Timp: 0.0 secunde
+Numar maxim de noduri existente in memorie: 1
+Numar total de noduri calculate: 0
+
+---------------------------------------------------------------------------------
+
+----A*----
+euristica neadmisibila
+
+Solutia 1:
+Nodul 1
+0: 5 4 rosu
+1: 2 2 galben
+2: 3 0 
+3: 7 3 albastru
+4: 1 0 
+5: 4 3 rosu
+
+Lungime: 1
+Cost: 0
+Timp: 0.0 secunde
+Numar maxim de noduri existente in memorie: 1
+Numar total de noduri calculate: 0
+
+---------------------------------------------------------------------------------
+
+----A* OPTIMISED----
+euristica banala
+
+Solutie:
+Nodul 1
+0: 5 4 rosu
+1: 2 2 galben
+2: 3 0 
+3: 7 3 albastru
+4: 1 0 
+5: 4 3 rosu
+
+Lungime: 1
+Cost: 0
+Timp: 0.0 secunde
+Numar maxim de noduri existente in memorie: 1
+Numar total de noduri calculate: 0
+
+---------------------------------------------------------------------------------
+
+----A* OPTIMISED----
+euristica admisibila 1
+
+Solutie:
+Nodul 1
+0: 5 4 rosu
+1: 2 2 galben
+2: 3 0 
+3: 7 3 albastru
+4: 1 0 
+5: 4 3 rosu
+
+Lungime: 1
+Cost: 0
+Timp: 0.0 secunde
+Numar maxim de noduri existente in memorie: 1
+Numar total de noduri calculate: 0
+
+---------------------------------------------------------------------------------
+
+----A* OPTIMISED----
+euristica admisibila 2
+
+Solutie:
+Nodul 1
+0: 5 4 rosu
+1: 2 2 galben
+2: 3 0 
+3: 7 3 albastru
+4: 1 0 
+5: 4 3 rosu
+
+Lungime: 1
+Cost: 0
+Timp: 0.0 secunde
+Numar maxim de noduri existente in memorie: 1
+Numar total de noduri calculate: 0
+
+---------------------------------------------------------------------------------
+
+----A* OPTIMISED----
+euristica neadmisibila
+
+Solutie:
+Nodul 1
+0: 5 4 rosu
+1: 2 2 galben
+2: 3 0 
+3: 7 3 albastru
+4: 1 0 
+5: 4 3 rosu
+
+Lungime: 1
+Cost: 0
+Timp: 0.0 secunde
+Numar maxim de noduri existente in memorie: 1
+Numar total de noduri calculate: 0
+
+---------------------------------------------------------------------------------
+
+----ITERATIVE DEEPENING A*----
+euristica banala
+
+Solutia 1:
+Nodul 1
+0: 5 4 rosu
+1: 2 2 galben
+2: 3 0 
+3: 7 3 albastru
+4: 1 0 
+5: 4 3 rosu
+
+Lungime: 1
+Cost: 0
+Timp: 0.0 secunde
+Numar maxim de noduri existente in memorie: 0
+Numar total de noduri calculate: 0
+
+---------------------------------------------------------------------------------
+
+----ITERATIVE DEEPENING A*----
+euristica admisibila 1
+
+Solutia 1:
+Nodul 1
+0: 5 4 rosu
+1: 2 2 galben
+2: 3 0 
+3: 7 3 albastru
+4: 1 0 
+5: 4 3 rosu
+
+Lungime: 1
+Cost: 0
+Timp: 0.0 secunde
+Numar maxim de noduri existente in memorie: 0
+Numar total de noduri calculate: 0
+
+---------------------------------------------------------------------------------
+
+----ITERATIVE DEEPENING A*----
+euristica admisibila 2
+
+Solutia 1:
+Nodul 1
+0: 5 4 rosu
+1: 2 2 galben
+2: 3 0 
+3: 7 3 albastru
+4: 1 0 
+5: 4 3 rosu
+
+Lungime: 1
+Cost: 0
+Timp: 0.0 secunde
+Numar maxim de noduri existente in memorie: 0
+Numar total de noduri calculate: 0
+
+---------------------------------------------------------------------------------
+
+----ITERATIVE DEEPENING A*----
+euristica neadmisibila
+
+Solutia 1:
+Nodul 1
+0: 5 4 rosu
+1: 2 2 galben
+2: 3 0 
+3: 7 3 albastru
+4: 1 0 
+5: 4 3 rosu
+
+Lungime: 1
+Cost: 0
+Timp: 0.0 secunde
+Numar maxim de noduri existente in memorie: 0
+Numar total de noduri calculate: 0
+
+---------------------------------------------------------------------------------
+

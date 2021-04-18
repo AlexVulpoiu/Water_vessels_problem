@@ -276,6 +276,14 @@ class Graph:
                     h += 1
             return h
         elif heuristic_type == "euristica admisibila 2":
+            # calculez cate culori din starea finala nu sunt in starea curenta
+            h = 0
+            current_colors = set([vessel[2] for vessel in information])
+            for color in self.scopes.keys():
+                if color not in current_colors:
+                    h += 1
+            return h
+        else:
             # pentru fiecare culoare, adaug cantitatea care mai trebuie obtinuta pentru a ajunge in starea finala
             h = 0
             colors = {}
@@ -290,23 +298,6 @@ class Graph:
                 else:
                     h += max(0, self.scopes[k] - colors[k])
             return h
-        else:
-            # calculez cati litri de apa mai trebuie in total pentru a ajunge la starea finala
-            quantity = {}
-            for vessel in information:  # cantitatile din fiecare culoare
-                if vessel[2] not in quantity.keys():
-                    quantity[vessel[2]] = vessel[1]
-                else:
-                    quantity[vessel[2]] += vessel[1]
-            litres = 0
-            for q in quantity.keys():
-                if q in self.scopes.keys():
-                    litres += max(0, self.scopes[q] - quantity[q])
-            max_cost = max(self.costs.values())     # calculez costul maxim al unei culori
-            # h = numarul de vase * cantitatea totala necesara * costul maxim * 2(se combina 2 culori pentru rezultat) +
-            #     costul maxim * cantitatea(se poate muta lichid dintr-un vas in altul)
-            h = len(self.start) * litres * max_cost * 2 + max_cost * litres
-            return h
 
 
 def uniform_cost_search(source_graph: Graph, searched_solutions: int) -> None:
@@ -318,11 +309,19 @@ def uniform_cost_search(source_graph: Graph, searched_solutions: int) -> None:
     global output_file, timeout, number_of_solutions
 
     start_time = time.time()
-    queue = [TraversalNode(source_graph.start, None)]  # coada cu noduri
+    queue = [TraversalNode(source_graph.start, None, 0, source_graph.compute_h(source_graph.start))]
+    # coada cu noduri
     max_nodes = 1
     total_nodes = 0
     while len(queue) > 0:
         current_node = queue.pop(0)  # extrag primul nod din coada
+
+        aux_current = copy.deepcopy(current_node.information)
+        aux_scope = copy.deepcopy(source_graph.scopes)
+        aux_combinations = copy.deepcopy(source_graph.combinations)
+        if not has_scope(aux_current, aux_scope, aux_combinations):
+            continue    # daca nodul curent nu poate contine o stare finala, nu mai este expandat
+
         if source_graph.test_scope(current_node):  # daca nodul curent este nod scop, afisez solutia
             intermediate_time = time.time()
             output_file.write("----UNIFORM COST SEARCH----\n\nSolutia {}:\n".
@@ -338,7 +337,7 @@ def uniform_cost_search(source_graph: Graph, searched_solutions: int) -> None:
 
         intermediate_time = time.time()
         if intermediate_time - start_time > timeout:    # cand depasec timeout-ul, ma opresc
-            output_file.write("Timpul de executie a depasit timeout-ul!\n")
+            output_file.write("----UNIFORM COST SEARCH----\n\nTimpul de executie a depasit timeout-ul!\n\n")
             break
 
         successors = source_graph.generate_successors(current_node)     # generez succesorii nodului
@@ -367,11 +366,19 @@ def a_star(source_graph: Graph, searched_solutions: int, heuristic_type="euristi
     global output_file, timeout, number_of_solutions
 
     start_time = time.time()
-    queue = [TraversalNode(source_graph.start, None)]  # coada cu noduri
+    queue = [TraversalNode(source_graph.start, None, 0, source_graph.compute_h(source_graph.start, heuristic_type))]
+    # coada cu noduri
     max_nodes = 1
     total_nodes = 0
     while len(queue) > 0:
         current_node = queue.pop(0)  # extrag primul nod din coada
+
+        aux_current = copy.deepcopy(current_node.information)
+        aux_scope = copy.deepcopy(source_graph.scopes)
+        aux_combinations = copy.deepcopy(source_graph.combinations)
+        if not has_scope(aux_current, aux_scope, aux_combinations):
+            continue  # daca nodul curent nu poate contine o stare finala, nu mai este expandat
+
         if source_graph.test_scope(current_node):  # daca nodul curent este nod scop, afisez solutia
             intermediate_time = time.time()
             output_file.write("----A*----\n{}\n\nSolutia {}:\n".
@@ -387,7 +394,7 @@ def a_star(source_graph: Graph, searched_solutions: int, heuristic_type="euristi
 
         intermediate_time = time.time()     # cand timpul de la startul algoritmului depaseste timeoout, oprim cautarea
         if intermediate_time - start_time > timeout:
-            output_file.write("Timpul de executie a depasit timeout-ul!\n")
+            output_file.write("----A*----\n{}\n\nTimpul de executie a depasit timeout-ul!\n\n".format(heuristic_type))
             break
 
         successors = source_graph.generate_successors(current_node, heuristic_type)
@@ -415,12 +422,20 @@ def a_star_optimised(source_graph: Graph, heuristic_type="euristica banala") -> 
     global output_file, timeout
 
     start_time = time.time()
-    open_list = [TraversalNode(source_graph.start, None)]   # lista nodurilor de expandat
+    open_list = [TraversalNode(source_graph.start, None, 0, source_graph.compute_h(source_graph.start, heuristic_type))]
+    # lista nodurilor de expandat
     closed_list = []    # lista nodurilor expandate
     max_nodes = 1
     total_nodes = 0
     while len(open_list) > 0:
         current_node = open_list.pop(0)     # extrag primul nod din lista de expandat
+
+        aux_current = copy.deepcopy(current_node.information)
+        aux_scope = copy.deepcopy(source_graph.scopes)
+        aux_combinations = copy.deepcopy(source_graph.combinations)
+        if not has_scope(aux_current, aux_scope, aux_combinations):
+            continue  # daca nodul curent nu poate contine o stare finala, nu mai este expandat
+
         closed_list.append(current_node)    # il marchez ca expandat
         if source_graph.test_scope(current_node):   # daca e nod scop, afisez solutia
             intermediate_time = time.time()
@@ -434,7 +449,8 @@ def a_star_optimised(source_graph: Graph, heuristic_type="euristica banala") -> 
 
         intermediate_time = time.time()     # cand depasesc timeout-ul, opresc algoritmul
         if intermediate_time - start_time > timeout:
-            output_file.write("Timpul de executie a depasit timeout-ul!\n")
+            output_file.write("----A* OPTIMISED----\n{}\n\nTimpul de executie a depasit timeout-ul!\n\n".
+                              format(heuristic_type))
             break
 
         successors = source_graph.generate_successors(current_node, heuristic_type)
@@ -480,16 +496,18 @@ def iterative_deepening_a_star(source_graph: Graph, searched_solutions: int, heu
     global output_file, timeout
 
     start_time = time.time()
-    start_node = TraversalNode(source_graph.start, None)
+    start_node = TraversalNode(source_graph.start, None, 0, source_graph.compute_h(source_graph.start, heuristic_type))
     limit = start_node.f
     total_nodes = 0
+    max_nodes = 0
     while True:
         searched_solutions, result, total_nodes = build_path(source_graph, start_node, limit, searched_solutions,
-                                                             start_time, total_nodes, heuristic_type)
+                                                             start_time, total_nodes, max_nodes, 0, heuristic_type)
         # incerc sa construiesc drumuri cu costul pana la o anumita limita
         intermediate_time = time.time()     # daca algoritmul depaseste timpul, opresc executia
         if intermediate_time - start_time > timeout:
-            output_file.write("Timpul de executie a depasit timeout-ul!\n")
+            output_file.write("----ITERATIVE DEEPENING A*----\n{}\n\nTimpul de executie a depasit timeout-ul!\n\n".
+                              format(heuristic_type))
             break
 
         if result == "done":
@@ -503,7 +521,8 @@ def iterative_deepening_a_star(source_graph: Graph, searched_solutions: int, heu
 
 
 def build_path(source_graph: Graph, current_node: TraversalNode, limit: int, searched_solutions: int,
-               start_time: float, total_nodes: int, heuristic_type="euristica banala") -> tuple:
+               start_time: float, total_nodes: int, max_nodes: int, last_max: int, heuristic_type="euristica banala") \
+        -> tuple:
     """
     :param source_graph: Graph, graful sursa al problemei
     :param current_node: TraversalNode, nodul curent din arborele de parcurgere
@@ -511,6 +530,8 @@ def build_path(source_graph: Graph, current_node: TraversalNode, limit: int, sea
     :param searched_solutions: int, numarul de solutii cautate
     :param start_time: float, timpul de start al algoritmului
     :param total_nodes: int, numarul de noduri generate
+    :param max_nodes: int, maximul curent
+    :param last_max: int, maximul calculat pe drumul curent
     :param heuristic_type: str, euristica folosita
     :return: tuple, returneaza numarul de solutii care mai trebuie cautate, un rezultat
             ("done", infinit sau minimul la care s-a ajuns), numarul total de noduri
@@ -520,13 +541,19 @@ def build_path(source_graph: Graph, current_node: TraversalNode, limit: int, sea
     if current_node.f > limit:
         return searched_solutions, current_node.f, total_nodes
 
-    max_nodes = 1
+    aux_current = copy.deepcopy(current_node.information)
+    aux_scope = copy.deepcopy(source_graph.scopes)
+    aux_combinations = copy.deepcopy(source_graph.combinations)
+    # daca nodul curent nu poate contine o stare finala, nu mai este expandat
+    if not has_scope(aux_current, aux_scope, aux_combinations):
+        return searched_solutions, limit, total_nodes
+
     intermediate_time = time.time()     # daca algoritmul depaseste timeout-ul, il opresc
     if intermediate_time - start_time > timeout:
-        output_file.write("Timpul de executie a depasit timeout-ul!\n")
+        output_file.write("----ITERATIVE DEEPENING A*----\n{}\n\nTimpul de executie a depasit timeout-ul!\n\n".
+                          format(heuristic_type))
         return 0, "done", total_nodes
 
-    max_nodes = max(max_nodes, total_nodes)
     if source_graph.test_scope(current_node) and current_node.f == limit:  # daca este nod scop cu costul egal cu limita
         intermediate_time = time.time()     # afisez solutia
         output_file.write("----ITERATIVE DEEPENING A*----\n{}\n\nSolutia {}:\n".
@@ -542,11 +569,12 @@ def build_path(source_graph: Graph, current_node: TraversalNode, limit: int, sea
 
     successors = source_graph.generate_successors(current_node, heuristic_type)
     total_nodes += len(successors)
+    max_nodes = max(max_nodes, len(successors) + last_max)
     minimum = float("inf")
     for s in successors:
         # pentru fiecare succesor, incerc sa construiesc un drum
-        searched_solutions, result, total_nodes = build_path(source_graph, s, limit, number_of_solutions, start_time,
-                                                             total_nodes, heuristic_type)
+        searched_solutions, result, total_nodes = build_path(source_graph, s, limit, searched_solutions, start_time,
+                                                             total_nodes, max_nodes, max_nodes, heuristic_type)
         if result == "done":
             return 0, "done", total_nodes
         if result < minimum:
@@ -654,9 +682,22 @@ if __name__ == "__main__":
         output_file = open(output_folder + "/output_" + file, 'w')  # creez fisierul corespunzator de output
         valid_data = True
         graph = Graph(file)
+
         if valid_data:
             uniform_cost_search(graph, number_of_solutions)
+
+            a_star(graph, number_of_solutions, "euristica banala")
+            a_star(graph, number_of_solutions, "euristica admisibila 1")
+            a_star(graph, number_of_solutions, "euristica admisibila 2")
             a_star(graph, number_of_solutions, "euristica neadmisibila")
+
+            a_star_optimised(graph, "euristica banala")
             a_star_optimised(graph, "euristica admisibila 1")
+            a_star_optimised(graph, "euristica admisibila 2")
+            a_star_optimised(graph, "euristica neadmisibila")
+
+            iterative_deepening_a_star(graph, number_of_solutions, "euristica banala")
+            iterative_deepening_a_star(graph, number_of_solutions, "euristica admisibila 1")
+            iterative_deepening_a_star(graph, number_of_solutions, "euristica admisibila 2")
             iterative_deepening_a_star(graph, number_of_solutions, "euristica neadmisibila")
         output_file.close()
