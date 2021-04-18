@@ -272,7 +272,7 @@ class Graph:
                     colors[vessel[2]] = vessel[1]
 
             for vessel in information:
-                if vessel[2] not in self.scopes.keys() or self.scopes[vessel[2]] != colors[vessel[2]]:
+                if vessel[2] in self.scopes.keys() and self.scopes[vessel[2]] != colors[vessel[2]]:
                     h += 1
             return h
         elif heuristic_type == "euristica admisibila 2":

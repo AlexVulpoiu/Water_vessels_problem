@@ -55,7 +55,7 @@ Din vasul 2 s-au turnat 1 litri de apa de culoare rosu in vasul 3
 
 Lungime: 6
 Cost: 20
-Timp: 3.295 secunde
+Timp: 1.734 secunde
 Numar maxim de noduri existente in memorie: 6773
 Numar total de noduri calculate: 7602
 
@@ -114,9 +114,9 @@ Din vasul 2 s-au turnat 1 litri de apa de culoare rosu in vasul 3
 
 Lungime: 6
 Cost: 20
-Timp: 1.255 secunde
-Numar maxim de noduri existente in memorie: 4384
-Numar total de noduri calculate: 4925
+Timp: 1.889 secunde
+Numar maxim de noduri existente in memorie: 7041
+Numar total de noduri calculate: 7902
 
 ---------------------------------------------------------------------------------
 
@@ -173,7 +173,7 @@ Din vasul 2 s-au turnat 1 litri de apa de culoare rosu in vasul 3
 
 Lungime: 6
 Cost: 20
-Timp: 2.78 secunde
+Timp: 1.518 secunde
 Numar maxim de noduri existente in memorie: 6730
 Numar total de noduri calculate: 7555
 
@@ -232,7 +232,7 @@ Din vasul 2 s-au turnat 1 litri de apa de culoare rosu in vasul 3
 
 Lungime: 6
 Cost: 20
-Timp: 4.868 secunde
+Timp: 1.634 secunde
 Numar maxim de noduri existente in memorie: 6748
 Numar total de noduri calculate: 7576
 
@@ -291,7 +291,7 @@ Din vasul 2 s-au turnat 1 litri de apa de culoare rosu in vasul 3
 
 Lungime: 6
 Cost: 20
-Timp: 0.529 secunde
+Timp: 0.112 secunde
 Numar maxim de noduri existente in memorie: 662
 Numar total de noduri calculate: 1022
 
@@ -350,9 +350,9 @@ Din vasul 2 s-au turnat 1 litri de apa de culoare rosu in vasul 3
 
 Lungime: 6
 Cost: 20
-Timp: 0.229 secunde
-Numar maxim de noduri existente in memorie: 580
-Numar total de noduri calculate: 868
+Timp: 0.115 secunde
+Numar maxim de noduri existente in memorie: 692
+Numar total de noduri calculate: 1078
 
 ---------------------------------------------------------------------------------
 
@@ -409,7 +409,7 @@ Din vasul 2 s-au turnat 1 litri de apa de culoare rosu in vasul 3
 
 Lungime: 6
 Cost: 20
-Timp: 0.419 secunde
+Timp: 0.221 secunde
 Numar maxim de noduri existente in memorie: 648
 Numar total de noduri calculate: 973
 
@@ -468,7 +468,7 @@ Din vasul 2 s-au turnat 1 litri de apa de culoare rosu in vasul 3
 
 Lungime: 6
 Cost: 20
-Timp: 0.211 secunde
+Timp: 0.141 secunde
 Numar maxim de noduri existente in memorie: 692
 Numar total de noduri calculate: 1040
 
@@ -527,7 +527,7 @@ Din vasul 2 s-au turnat 1 litri de apa de culoare rosu in vasul 3
 
 Lungime: 6
 Cost: 20
-Timp: 2.541 secunde
+Timp: 1.433 secunde
 Numar maxim de noduri existente in memorie: 57
 Numar total de noduri calculate: 32132
 
@@ -586,9 +586,9 @@ Din vasul 2 s-au turnat 1 litri de apa de culoare rosu in vasul 3
 
 Lungime: 6
 Cost: 20
-Timp: 2.104 secunde
+Timp: 1.362 secunde
 Numar maxim de noduri existente in memorie: 57
-Numar total de noduri calculate: 24220
+Numar total de noduri calculate: 33111
 
 ---------------------------------------------------------------------------------
 
@@ -645,7 +645,7 @@ Din vasul 2 s-au turnat 1 litri de apa de culoare rosu in vasul 3
 
 Lungime: 6
 Cost: 20
-Timp: 2.658 secunde
+Timp: 1.269 secunde
 Numar maxim de noduri existente in memorie: 57
 Numar total de noduri calculate: 31266
 
@@ -712,7 +712,7 @@ Din vasul 1 s-au turnat 2 litri de apa de culoare verde in vasul 2
 
 Lungime: 7
 Cost: 22
-Timp: 3.655 secunde
+Timp: 1.683 secunde
 Numar maxim de noduri existente in memorie: 67
 Numar total de noduri calculate: 40596
 

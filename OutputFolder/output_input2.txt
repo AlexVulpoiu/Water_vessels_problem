@@ -91,7 +91,7 @@ Nodul 1
 
 Lungime: 1
 Cost: 0
-Timp: 0.0 secunde
+Timp: 0.001 secunde
 Numar maxim de noduri existente in memorie: 1
 Numar total de noduri calculate: 0
 
@@ -211,7 +211,7 @@ Nodul 1
 
 Lungime: 1
 Cost: 0
-Timp: 0.0 secunde
+Timp: 0.001 secunde
 Numar maxim de noduri existente in memorie: 0
 Numar total de noduri calculate: 0
 
