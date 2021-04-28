@@ -91,9 +91,9 @@ class Graph:
                 if t[0] > t[1]:  # ordonez culorile combinate alfabetic
                     t = (t[1], t[0], t[2])
                     # validare
-                    colors.add(t[0])  # adaug culorile in set
-                    colors.add(t[1])
-                    colors.add(t[2])
+                colors.add(t[0])  # adaug culorile in set
+                colors.add(t[1])
+                colors.add(t[2])
                 self.combinations.append(t)
             else:
                 self.costs[t[0]] = int(t[1])  # costurile asociate culorilor
